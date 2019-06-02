@@ -1,3 +1,3 @@
-# Academy - Netflix
+# Academy - NerdFlix
 
-Espaço do projeto **Netflix**.
+Espaço do projeto **NerdFlix**.
