@@ -1,0 +1,54 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.black{
+    background-color: black;
+}
+
+.carousel-inner {
+    background-color: black;
+}
+
+.carousel-inner img {
+    max-height: 500px;
+    object-fit: none;
+    /* Do not scale the image */
+    object-position: center;
+    /* Center the image within the element */
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.testimonial-group>.row {
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+}
+
+.testimonial-group>.row>.col-xs-4 {
+    display: inline-block;
+    float: none;
+    width: 250px;
+}
+
+/* Decorations */
+.col-xs-4 {
+    color: #fff;
+    font-size: 48px;
+    padding-bottom: 20px;
+    padding-top: 18px;
+}
+
+.col-xs-4:nth-child(3n+1) {
+    background: #c69;
+}
+
+.col-xs-4:nth-child(3n+2) {
+    background: #9c6;
+}
+
+.col-xs-4:nth-child(3n+3) {
+    background: #69c;
+}
