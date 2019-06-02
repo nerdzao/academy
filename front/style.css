@@ -21,7 +21,7 @@ body {
 }
 
 .testimonial-group>.row {
-    overflow-x: auto;
+    overflow: none;
     white-space: nowrap;
     flex-wrap: nowrap;
 }
@@ -55,3 +55,11 @@ body {
 .space-top{
     margin-top: 15px;
 }
+
+/***** Zoom *****/
+
+.col-xs-4:hover{
+    transform: scale(1.2);
+    transition: all ease 500ms;
+    height: scale(1.2);
+  }
