@@ -15,10 +15,9 @@ body {
     max-height: 500px;
     object-fit: none;
     /* Do not scale the image */
-    object-position: center;
+    object-position: top;
     /* Center the image within the element */
-    width: 100%;
-    margin-bottom: 1rem;
+    width: 50%;
 }
 
 .testimonial-group>.row {
@@ -51,4 +50,8 @@ body {
 
 .col-xs-4:nth-child(3n+3) {
     background: #69c;
+}
+
+.space-top{
+    margin-top: 15px;
 }
