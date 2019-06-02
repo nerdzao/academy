@@ -6,4 +6,4 @@
 
 Espaço dos projetos para o **Nerdzão Academy**.
 
-**Turma 1:** [Netflix](https://github.com/nerdzao/academy/tree/netflix)
+**Turma 1:** [NerdFlix](https://github.com/nerdzao/academy/tree/nerdflix)
