@@ -1,5 +1,6 @@
-
-![enter image description here](https://raw.githubusercontent.com/nerdzao/academy/master/logo.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/nerdzao/academy/master/logo.png">
+</p>
 
 # Academy
 
