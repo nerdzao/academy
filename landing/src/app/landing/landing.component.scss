@@ -1,0 +1,11 @@
+::ng-deep .tab-content {
+    background-color: transparent !important;
+    color: white;
+}
+
+::ng-deep .dropdown-menu { 
+    transform: none;
+    left: -40px;
+    display: block;
+    width: 50%;
+}

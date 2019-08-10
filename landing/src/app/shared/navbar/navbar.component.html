@@ -1,0 +1,65 @@
+<nav id="navbar-main" class="navbar navbar-expand-lg navbar-transparent navbar-dark bg-dark"
+  style="position: fixed;">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="['/home']">
+      <img src="./assets/img/brand/nerdzao.png">
+    </a>
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbar_global" [ngbCollapse]="isCollapsed">
+      <div class="navbar-collapse-header">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <a [routerLink]="['/home']">
+              <img src="./assets/img/brand/nerdzao.png">
+            </a>
+          </div>
+          <div class="col-6 collapse-close">
+            <button type="button" class="navbar-toggler" (click)="isCollapsed = !isCollapsed"
+              [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+        <li class="nav-item">
+          <a class="nav-link nav-link-icon" data-toggle="tooltip"
+            title="Like us on Facebook" target="_blank" href="https://www.facebook.com/nerdzao/">
+            <i class="fa fa-facebook-square"></i>
+            <span class="nav-link-inner--text d-lg-none">Facebook</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-icon" data-toggle="tooltip" title="Follow us on Instagram" target="_blank" href="https://instagram.com/onerdzao">
+            <i class="fa fa-instagram"></i>
+            <span class="nav-link-inner--text d-lg-none">Instagram</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-icon" data-toggle="tooltip"
+            title="Follow us on Twitter" target="_blank" href="https://twitter.com/onerdzao">
+            <i class="fa fa-twitter-square"></i>
+            <span class="nav-link-inner--text d-lg-none">Twitter</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-icon" target="_blank" href="https://github.com/nerdzao" data-toggle="tooltip" title="Star us on Github">
+            <i class="fa fa-github"></i>
+            <span class="nav-link-inner--text d-lg-none">Github</span>
+          </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav-link-icon" target="_blank" href="https://meetup.com/nerdzao" data-toggle="tooltip" title="Star us on Meetup">
+              <i class="fa fa-meetup"></i>
+              <span class="nav-link-inner--text d-lg-none">meetup</span>
+            </a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
