@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'nerdflix';
+  showMovie = {
+    index: null,
+    movie: null,
+  }
+  data = [
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+  ]
+
+  selected(index, movie) {
+    this.showMovie = { index, movie }
+  }
 }

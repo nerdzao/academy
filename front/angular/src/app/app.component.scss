@@ -1,0 +1,37 @@
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem;
+    .card-item {
+        background-color: white;
+        color: black;
+        display: inline-block;
+        margin-left: .1rem;
+        margin-right: .1rem;
+        transition: all .2s ease-in-out;
+        max-width: 15rem;
+        max-height: 10rem;
+    }
+    .card-item img {
+        height: 100%;
+        width: 100%;
+    }
+    .card-item:hover {
+        transform: scale(1.2);
+        background-color: black;
+        color: white;
+        border-color: white;
+        border-style: solid;
+        border-width: 2px;
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.container-cards {
+    color: white;
+    padding: 1rem;
+}
