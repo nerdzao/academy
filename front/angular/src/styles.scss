@@ -1,6 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~font-awesome/css/font-awesome.css';
 body {
-    background: #343a40!important;
+    background: black !important;
+}
+
+.bg-dark {
+    background-color: black !important;
+}
+
+.picsum-img-wrapper {
+    max-height: 60vh;
+    img {
+        width: 100%;
+        opacity: 0.3;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.carousel-caption {
+    text-align: left;
+    top: 10vh !important;
+}
+
+.movie {
+    height: 50vh;
+    padding: 10px;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    img {
+        position: absolute;
+        z-index: 0;
+        width: 50%;
+        opacity: 0.5;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .content-movie {
+        position: absolute;
+    }
 }

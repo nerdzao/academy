@@ -1,9 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a href="#"><img src="assets/nerdflix.png" class="navbar-brand" height="75"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
+        <span class="navbar-toggler-icon"></span>
+        </button>
     <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -25,13 +24,55 @@
         </form>
     </div>
 </nav>
-
+<ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
+    <ng-template ngbSlide *ngFor="let image of images; let i = index;">
+        <div class="picsum-img-wrapper">
+            <img [src]="image" alt="Random slide">
+        </div>
+        <div class="carousel-caption">
+            <h3>{{ i }}</h3>
+            <p>This carousel hides navigation arrows and indicators.</p>
+            <div>
+                <button type="button" class="btn btn-danger"> 
+              <i class="fa fa-play fa-1x" aria-hidden="true"> </i>    
+              Assistir
+              </button>
+                <button type="button" class="btn btn-dark mx-sm-3">
+              <i class="fa fa-plus fa-1x" aria-hidden="true"> </i>    
+              Minha Lista
+              </button>
+            </div>
+        </div>
+    </ng-template>
+</ngb-carousel>
 <div class="container-cards" *ngFor="let item of data; let i = index;">
-    <h1>Lançamento</h1>
-    <div *ngIf="showMovie.index == i"> TESET </div>
+    <h5>{{item.type}}</h5>
     <div class="scrolling-wrapper">
-        <div class="card-item" *ngFor="let movie of item" (click)="selected(i, movie)">
+        <div class="card-item" *ngFor="let movie of item.movies" (click)="selected(i, movie, target)">
             <img src="assets/example.jpeg">
         </div>
+    </div>
+    <div *ngIf="hasShowMovie(i)" class="movie-selected" class="movie" id="content{{i}}">
+        <div class="content-movie">
+            <div class="row d-flex align-items-center">
+                <div class="col-6">
+                    <h2>MOVIE</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum perferendis ipsa aliquid voluptatibus asperiores obcaecati iusto eius assumenda quam autem, dignissimos vel veniam, libero, quisquam nesciunt! Perspiciatis iste labore
+                        ipsam.
+                    </p>
+                    <div>
+                        <button type="button" class="btn btn-danger"> 
+                    <i class="fa fa-play fa-1x" aria-hidden="true"> </i>    
+                    Assistir
+                    </button>
+                        <button type="button" class="btn btn-dark mx-sm-3">
+                    <i class="fa fa-plus fa-1x" aria-hidden="true"> </i>    
+                    Minha Lista
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="assets/example.jpeg" class="article-bg">
     </div>
 </div>
