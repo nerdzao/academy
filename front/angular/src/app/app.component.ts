@@ -28,7 +28,7 @@ export class AppComponent {
       type: "Lançamentos",
       movies: [
         {
-
+          
         },
       ],
     },
