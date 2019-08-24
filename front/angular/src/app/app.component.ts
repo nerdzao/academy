@@ -1,5 +1,7 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { MoviesApiService } from '../services/api/movies';
+import { MoviesTypesApiService } from '../services/api/movies-types';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +11,21 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 export class AppComponent {
   showNavigationArrows = true;
   showNavigationIndicators = true;
-  images = [1, 2, 3].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
+  data = {
+    banners:[],
+    catalog:[]
+  }
 
-  constructor(config: NgbCarouselConfig, private elRef: ElementRef) {
+  constructor(
+    config: NgbCarouselConfig, 
+    private moviesApiService: MoviesApiService,
+    private moviesTypesApiService: MoviesTypesApiService
+    ) {
     config.interval = 100000000000000000000;
     config.pauseOnHover = true;
     config.showNavigationArrows = true;
     config.showNavigationIndicators = true;
+    this.init();
   }
 
   showMovie = {
@@ -23,35 +33,16 @@ export class AppComponent {
     movie: null,
   }
 
-  data = [
-    {
-      type: "Lançamentos",
-      movies: [
-        {
-          
-        },
-      ],
-    },
-    {
-      type: "Comédia",
-      movies: [
-        {
-
-        }
-      ],
-    },
-    {
-      type: "Ação",
-      movies: [
-        {
-          movie: ""
-        }
-      ],
-    }
-  ]
+  async init(){
+    const dataBanners = await this.moviesApiService.execute();
+    const dataCatalog = await this.moviesTypesApiService.execute();
+    this.data.banners = dataBanners.result;
+    this.data.catalog = Object.keys(dataCatalog.result).map(item => dataCatalog.result[item]);
+  }
 
   selected(index: number, movie: object) {
-    this.showMovie = !this.hasShowMovie(index) ? { index, movie } : { index: null, movie: null };
+    console.log(movie);
+    this.showMovie = { index, movie };
   }
 
   hasShowMovie(i: number) {
