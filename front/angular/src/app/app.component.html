@@ -29,7 +29,7 @@
         <div class="picsum-img-wrapper">
             <img [src]="banner.img" alt="Random slide">
         </div>
-        <div class="carousel-caption">
+        <div class="carousel-caption mt-5">
             <h3>{{ banner.name }}</h3>
             <p>{{ banner.description }}</p>
             <div>
@@ -37,7 +37,7 @@
               <i class="fa fa-play fa-1x" aria-hidden="true"> </i>    
               Assistir
               </button>
-                <button type="button" class="btn btn-dark mx-sm-3">
+                <button type="button" class="btn btn-dark mx-3">
               <i class="fa fa-plus fa-1x" aria-hidden="true"> </i>    
               Minha Lista
               </button>
@@ -48,13 +48,13 @@
 <div class="container-cards" *ngFor="let item of data.catalog; let i = index;">
     <h5 class="container-card-title">{{item.text}}</h5>
     <div class="scrolling-wrapper">
-        <div class="card-item" *ngFor="let movie of item.movies" (click)="selected(i, movie, target)">
+        <div class="card-item" *ngFor="let movie of item.movies" (click)="selected(i, movie)">
             <img [src]="movie.movie.img">
         </div>
     </div>
-    <div *ngIf="hasShowMovie(i)" class="movie-selected" class="movie" id="content{{i}}">
+    <div *ngIf="hasShowMovie(i)" class="movie-selected" [ngClass]="{'active-movie': hasShowMovie(i)}" class="movie" id="content{{i}}">
         <div class="content-movie">
-            <div class="row d-flex align-items-center">
+            <div class="row d-flex align-items-center ml-1">
                 <div class="col-6">
                     <h2>{{showMovie.movie.movie.name}}</h2>
                     <p>{{showMovie.movie.movie.description}}

@@ -21,8 +21,6 @@ export class AppComponent {
     private moviesApiService: MoviesApiService,
     private moviesTypesApiService: MoviesTypesApiService
     ) {
-    config.interval = 100000000000000000000;
-    config.pauseOnHover = true;
     config.showNavigationArrows = true;
     config.showNavigationIndicators = true;
     this.init();
@@ -41,8 +39,8 @@ export class AppComponent {
   }
 
   selected(index: number, movie: object) {
-    console.log(movie);
     this.showMovie = { index, movie };
+    //window.document.getElementsByClassName('active-movie')[0].scrollIntoView();
   }
 
   hasShowMovie(i: number) {

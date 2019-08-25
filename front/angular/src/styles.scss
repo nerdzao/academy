@@ -19,6 +19,10 @@ body {
         top: 0;
         right: 0;
         bottom: 0;
+        height: 100%;
+    }
+    @media (max-width: 576px) {
+        height: 50vh;
     }
 }
 
@@ -44,8 +48,13 @@ body {
         top: 0;
         right: 0;
         bottom: 0;
+        @media (max-width: 576px) {
+            height: 100vh;
+            width: 100vh;
+        }
     }
     .content-movie {
         position: absolute;
+        z-index: 99999999999999;
     }
 }
