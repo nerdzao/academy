@@ -63,17 +63,17 @@ const contentData = [
           'Docker compose',
         ]
       },
-      {
-        title: 'React native',
-        content: [
-          'Introdução',
-          'Instalação e Configuração',
-          'PENDENTE',
-          'PENDENTE',
-          'PENDENTE',
-          'PENDENTE',
-        ]
-      },
+      // {
+      //   title: 'React native',
+      //   content: [
+      //     'Introdução',
+      //     'Instalação e Configuração',
+      //     'PENDENTE',
+      //     'PENDENTE',
+      //     'PENDENTE',
+      //     'PENDENTE',
+      //   ]
+      // },
       {
         title: 'Publicação',
         content: [
